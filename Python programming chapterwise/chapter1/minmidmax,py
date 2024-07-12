@@ -1,0 +1,30 @@
+x = int(input("Enter a first number: "))
+y = int(input("Enter a second number: "))
+z = int(input("Enter a third number: "))
+
+if x <= y and x <= z:
+    min = x
+    if y <= z:
+        mid = y
+        max = z
+    else:
+        mid = z
+        max = y
+elif y <= x and y <= z:
+    min = y
+    if x <= z:
+        mid = x
+        max = z
+    else:
+        mid = z
+        max = x
+else:
+    min = z
+    if x <= y:
+        mid = x
+        max = y
+    else:
+        mid = y
+        max = x
+
+print("The numbers in ascending order are:", min, mid, max)
